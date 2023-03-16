@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 80%;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-btn {
+  display: none;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-nav li a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  background: #ccc;
+
+  padding: 10px 15px;
+  margin: 0 20px;
+}
+
+.btn-close {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    width: 50%;
+    height: 100vh;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    transition: left 0.3s;
+  }
+
+  .navbar-nav.show {
+    left: 0;
+  }
+
+  .btn-close {
+    border: none;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+
+    top: 30px;
+    right: 30px;
+  }
+
+  .btn-close:active {
+    opacity: 0.4;
+  }
+
+  .navbar-nav li a {
+    display: block;
+
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .nav-btn {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .nav-btn:active {
+    opacity: 0.4;
+  }
+}
